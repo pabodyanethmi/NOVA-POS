@@ -1,0 +1,290 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  color: #222;
+}
+
+/* ---------------- SIDEBAR ---------------- */
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #648776, #567565);
+  padding: 35px 20px;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.08);
+}
+
+.systemName {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li {
+  margin: 18px 0;
+}
+
+header ul li a {
+  display: block;
+  padding: 14px 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateX(6px);
+}
+
+/* ---------------- MAIN SECTIONS ---------------- */
+section {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 35px;
+  display: none;
+}
+
+section:target {
+  display: block;
+}
+
+#homePage {
+  display: block;
+}
+
+/* ---------------- TITLES ---------------- */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e3a33;
+  margin-bottom: 25px;
+}
+
+/* ---------------- CARD FORM ---------------- */
+form {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+form > div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #648776;
+  box-shadow: 0 0 0 4px rgba(100,135,118,0.15);
+  background: white;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  background: linear-gradient(135deg, #648776, #567565);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(86,117,101,0.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(86,117,101,0.35);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ---------------- TABLE ---------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+thead {
+  background: linear-gradient(135deg, #648776, #567565);
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f7f9f8;
+}
+
+/* ---------------- ORDER SECTION ---------------- */
+#OrderManage > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.includeDetails,
+.ItemSelect,
+.TotalCal {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+}
+
+.includeDetails h1,
+.ItemSelect h1,
+.TotalCal h1 {
+  margin-bottom: 15px;
+  color: #2f3d35;
+}
+
+.TotalCal h2 {
+  margin-bottom: 18px;
+  color: #555;
+}
+
+.addBtn,
+.placeOrder {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* ---------------- ORDER TABLE ---------------- */
+.mainTable {
+  margin-top: 30px;
+}
+
+.table > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: linear-gradient(135deg, #648776, #567565);
+  color: white;
+  padding: 15px;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+}
+
+.tableRows {
+  background: white;
+  min-height: 150px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  padding: 15px;
+}
+
+/* ---------------- HOME PAGE ---------------- */
+.carousel {
+  width: 100%;
+  max-width: 950px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width: 1024px) {
+  #OrderManage > div:first-child {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  header {
+    width: 210px;
+  }
+
+  section {
+    margin-left: 210px;
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
