@@ -180,26 +180,17 @@ function dropItem() {
 
 function loadTable() {
   $("#OrderManage .tableRows").empty();
+
   for (let i = 0; i < getItems.length; i++) {
-    $("#OrderManage .tableRows").append(
-      "<div> " +
-        "<div>" +
-        getItems[i].itemCode +
-        "</div>" +
-        "<div>" +
-        getItems[i].getItems +
-        "</div>" +
-        "<div>" +
-        getItems[i].itemPrice +
-        "</div>" +
-        "<div>" +
-        getItems[i].itemQty +
-        "</div>" +
-        "<div>" +
-        getItems[i].total +
-        "</div>" +
-        "</tr>"
-    );
+    $("#OrderManage .tableRows").append(`
+      <div class="row">
+        <div>${getItems[i].itemCode}</div>
+        <div>${getItems[i].getItems}</div>
+        <div>${getItems[i].itemPrice}</div>
+        <div>${getItems[i].itemQty}</div>
+        <div>${getItems[i].total}</div>
+      </div>
+    `);
   }
 }
 

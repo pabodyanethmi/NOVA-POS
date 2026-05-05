@@ -4,42 +4,42 @@ import { updateCustomer } from "../model/Customer.js";
 import { deleteCustomer } from "../model/Customer.js";
 
 $(document).ready(function () {
-  refresh();
+  refresh(); 
 });
 
 document
   .querySelector("#CustomerManage #customerForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); 
   });
 
-var custId;
+var custId; 
 var custName;
-var custAddress;
+var custAddress; 
 var custSalary;
 
-$("#CustomerManage .saveBtn").click(function () {
-  custId = $("#CustomerManage .custId").val();
+$("#CustomerManage .saveBtn").click(function () { 
+  custId = $("#CustomerManage .custId").val(); 
   custName = $("#CustomerManage .custName").val();
   custAddress = $("#CustomerManage .custAddress").val();
   custSalary = $("#CustomerManage .custSalary").val();
 
   let customer = {
-    custId: custId,
+    custId: custId, 
     custName: custName,
     custAddress: custAddress,
     custSalary: custSalary,
   };
 
-  let validResult = validate(customer);
+  let validResult = validate(customer); 
 
-  if (validResult) {
-    saveCustomer(customer);
-    refresh();
+  if (validResult) {  
+    saveCustomer(customer); 
+    refresh(); 
   }
 });
 
-function validate(customer) {
+function validate(customer) { 
   let valid = true;
 
   if (/^#C00[0-9]+$/.test(customer.custId)) {
